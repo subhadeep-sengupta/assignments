@@ -97,6 +97,7 @@ router.get("/purchasedCourses", userMiddleware, async (req, res) => {
     username: req.headers.username,
   }).populate(purchasedCourse);
 
+<<<<<<< HEAD
   res.status(200).json({
     course: user.purchasedCourse,
   });
@@ -111,8 +112,10 @@ router.get("/purchasedCourses", userMiddleware, async (req, res) => {
       $in: user.purchasedCourses,
     },
   });
+=======
+>>>>>>> ba5556f (mongo-with-jwt-auth done)
   res.status(200).json({
-    course: course,
+    course: user.purchasedCourse,
   });
 });
 
