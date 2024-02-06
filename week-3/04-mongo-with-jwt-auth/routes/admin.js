@@ -1,6 +1,7 @@
 const { Router } = require("express");
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { Admin, Course } = require("../db");
 =======
 const { Admin } = require("../db");
@@ -8,6 +9,9 @@ const { Admin } = require("../db");
 =======
 const { Admin, Course } = require("../db");
 >>>>>>> ba5556f (mongo-with-jwt-auth done)
+=======
+const { Admin, Course } = require("../db");
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
 const adminMiddleware = require("../middleware/admin");
 const courseSchema = require("../middleware/validator");
 const router = Router();
@@ -22,6 +26,7 @@ router.post("/signup", async (req, res) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const admin = await Admin.create({
 =======
   await Admin.create({
@@ -29,10 +34,14 @@ router.post("/signup", async (req, res) => {
 =======
   const admin = await Admin.create({
 >>>>>>> ba5556f (mongo-with-jwt-auth done)
+=======
+  const admin = await Admin.create({
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
     username: username,
     password: password,
   });
   res.status(200).json({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     message: `Admin created successfully, username: ${admin.username}`,
@@ -42,6 +51,9 @@ router.post("/signup", async (req, res) => {
 =======
     message: `Admin created successfully, username: ${admin.username}`,
 >>>>>>> ba5556f (mongo-with-jwt-auth done)
+=======
+    message: `Admin created successfully, username: ${admin.username}`,
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
   });
 });
 router.post("/signin", async (req, res) => {
@@ -51,6 +63,9 @@ router.post("/signin", async (req, res) => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
   const user = await Admin.findOne({
     username: username,
     password: password,
@@ -106,6 +121,7 @@ router.get("/courses", adminMiddleware, async (req, res) => {
   res.status(200).json({
     course: courses,
   });
+<<<<<<< HEAD
 =======
   await Admin.findOne({
 =======
@@ -179,4 +195,8 @@ router.get("/courses", adminMiddleware, (req, res) => {
 
 =======
 >>>>>>> ba5556f (mongo-with-jwt-auth done)
+=======
+});
+
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
 module.exports = router;

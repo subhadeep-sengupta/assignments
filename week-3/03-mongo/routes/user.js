@@ -1,6 +1,9 @@
 const { Router } = require("express");
 const { User, Course } = require("../db");
+<<<<<<< HEAD
 const { User, Course } = require("../db");
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
 const router = Router();
 const userMiddleware = require("../middleware/user");
 
@@ -17,6 +20,7 @@ router.post("/signup", (req, res) => {
   res.status(200).send({
     message: "User created successfully",
   });
+<<<<<<< HEAD
 router.post("/signup", (req, res) => {
   // Implement user signup logic
   const username = req.body.username;
@@ -29,6 +33,8 @@ router.post("/signup", (req, res) => {
   res.status(200).send({
     message: "User created successfully",
   });
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
 });
 
 router.get("/courses", async (req, res) => {
@@ -41,6 +47,7 @@ router.get("/courses", async (req, res) => {
   } catch (error) {
     res.status(404).send();
   }
+<<<<<<< HEAD
 router.get("/courses", async (req, res) => {
   // Implement listing all courses logic
   try {
@@ -51,6 +58,8 @@ router.get("/courses", async (req, res) => {
   } catch (error) {
     res.status(404).send();
   }
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
 });
 
 router.post("/courses/:courseId", userMiddleware, async (req, res) => {
@@ -71,6 +80,7 @@ router.post("/courses/:courseId", userMiddleware, async (req, res) => {
   res.status(200).send({
     message: `Course purchased successfully${courseId}`,
   });
+<<<<<<< HEAD
 router.post("/courses/:courseId", userMiddleware, async (req, res) => {
   // Implement course purchase logic
   const courseId = req.params.courseId;
@@ -89,6 +99,8 @@ router.post("/courses/:courseId", userMiddleware, async (req, res) => {
   res.status(200).send({
     message: `Course purchased successfully${courseId}`,
   });
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
 });
 
 router.get("/purchasedCourses", userMiddleware, async (req, res) => {
@@ -97,6 +109,7 @@ router.get("/purchasedCourses", userMiddleware, async (req, res) => {
     username: req.headers.username,
   }).populate(purchasedCourse);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(200).json({
     course: user.purchasedCourse,
@@ -114,11 +127,16 @@ router.get("/purchasedCourses", userMiddleware, async (req, res) => {
   });
 =======
 >>>>>>> ba5556f (mongo-with-jwt-auth done)
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
   res.status(200).json({
     course: user.purchasedCourse,
   });
 });
 
 module.exports = router;
+<<<<<<< HEAD
 
 module.exports = router;
+=======
+>>>>>>> e0d6f782d5f9e61dd7b2bf030da65bb0ebd97f2a
