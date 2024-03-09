@@ -1,2 +1,2 @@
 export const DB_URL =
-  "postgresql://www.subhadeepsengupta2002:bk3LwZKIVXE7@ep-tight-mountain-a55iebep.us-east-2.aws.neon.tech/prisma?sslmode=require";
+  "postgresql://www.subhadeepsengupta2002:2f4DkCqvcJzs@ep-proud-voice-a5siwn02.us-east-2.aws.neon.tech/user-todo?sslmode=require";
